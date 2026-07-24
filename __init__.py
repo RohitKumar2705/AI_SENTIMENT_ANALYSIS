@@ -1,20 +1,19 @@
+# data collection modules
 
-# ai agents for article selection ,sentiment analysis and data curation 
 
-try:
-    from .article_selector import select_relevant_articles
-    from .sentiment_analysis import analyze_news_sentiment
-    from .market_analyze import generate_comprehensive_analysis
-    from .polymarket_selector import select_relevant_polymarkets
-except ImportError:
-    from article_selector import select_relevant_articles
-    from sentiment_analysis import analyze_news_sentiment
-    from market_analyze import generate_comprehensive_analysis
-    from polymarket_selector import select_relevant_polymarkets
+from .market_data import get_market_data,get_sectir_performance,get_fear_greed_index,get_polymarket_data,is_market_open
+from .economic_data import get_economic_indicators
+from .news_data import get_news_articles
+from .earnings_data import get_earnings_sentiment
+
 
 __all__ = [
-    'select_relevant_articles',
-    'analyze_news_sentiment',
-    'generate_comprehensive_analysis',
-    'select_relevant_polymarkets'
+    'get_market_data',
+    'get_sector_performance',
+    'get_fear_greed_index',
+    'get_polymarket_data',
+    'is_market_open',
+    'get_economic_indicators',
+    'get_news_articles',
+    'get_earnings_sentiment'
 ]
